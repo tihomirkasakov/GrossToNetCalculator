@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace GrossToNetCalculator.Model.Dtos
 {
@@ -18,12 +16,9 @@ namespace GrossToNetCalculator.Model.Dtos
         private const string SSN_PATTERN = @"^\d{5,10}$";
         private const string FULL_NAME_PATTERN = @"^[a-zA-Z ]+$";
 
-
         public TaxPayerDto TaxPayer { get; set; }
-
         [Required]
-        public int SSN { get; set; }
-
+        public decimal SSN { get; set; }
         public decimal CharitySpent { get; set; }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)

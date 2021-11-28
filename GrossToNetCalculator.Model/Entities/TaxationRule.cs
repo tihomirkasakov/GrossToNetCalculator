@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GrossToNetCalculator.Model.Entities
+﻿namespace GrossToNetCalculator.Model.Entities
 {
-    public class TaxationRules : BaseEntity
+    public class TaxationRule : BaseEntity
     {
         public decimal NoTaxationValue { get; set; }
         public double IncomeTaxPercentage { get; set; }

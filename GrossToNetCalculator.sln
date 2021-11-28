@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrossToNetCalculator.Model", "GrossToNetCalculator.Model\GrossToNetCalculator.Model.csproj", "{B14390AF-5A3F-4666-96A0-DE32C15DE3D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrossToNetCalculator.Api", "GrossToNetCalculator.Api\GrossToNetCalculator.Api.csproj", "{1E4D017A-8E49-4824-ADE6-B91E86E7CDCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrossToNetCalculator.Api", "GrossToNetCalculator.Api\GrossToNetCalculator.Api.csproj", "{1E4D017A-8E49-4824-ADE6-B91E86E7CDCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrossToNetCalculator.Tests", "GrossToNetCalculator.Tests\GrossToNetCalculator.Tests.csproj", "{E44C1392-7729-488D-9EF5-817A5B6EE0F9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrossToNetCalculator.Data", "GrossToNetCalculator.Data\GrossToNetCalculator.Data.csproj", "{87E31C16-6520-43BB-93F2-62A015411BD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrossToNetCalculator.Model", "GrossToNetCalculator.Model\GrossToNetCalculator.Model.csproj", "{4316041E-DB16-41CF-8029-D71C22C9F0D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrossToNetCalculator.Service", "GrossToNetCalculator.Service\GrossToNetCalculator.Service.csproj", "{F7303397-2C20-4326-894B-459245BB790C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +19,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B14390AF-5A3F-4666-96A0-DE32C15DE3D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B14390AF-5A3F-4666-96A0-DE32C15DE3D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B14390AF-5A3F-4666-96A0-DE32C15DE3D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B14390AF-5A3F-4666-96A0-DE32C15DE3D6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1E4D017A-8E49-4824-ADE6-B91E86E7CDCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1E4D017A-8E49-4824-ADE6-B91E86E7CDCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E4D017A-8E49-4824-ADE6-B91E86E7CDCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E4D017A-8E49-4824-ADE6-B91E86E7CDCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E44C1392-7729-488D-9EF5-817A5B6EE0F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E44C1392-7729-488D-9EF5-817A5B6EE0F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E44C1392-7729-488D-9EF5-817A5B6EE0F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E44C1392-7729-488D-9EF5-817A5B6EE0F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87E31C16-6520-43BB-93F2-62A015411BD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87E31C16-6520-43BB-93F2-62A015411BD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87E31C16-6520-43BB-93F2-62A015411BD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87E31C16-6520-43BB-93F2-62A015411BD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4316041E-DB16-41CF-8029-D71C22C9F0D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4316041E-DB16-41CF-8029-D71C22C9F0D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4316041E-DB16-41CF-8029-D71C22C9F0D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4316041E-DB16-41CF-8029-D71C22C9F0D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7303397-2C20-4326-894B-459245BB790C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7303397-2C20-4326-894B-459245BB790C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7303397-2C20-4326-894B-459245BB790C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7303397-2C20-4326-894B-459245BB790C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

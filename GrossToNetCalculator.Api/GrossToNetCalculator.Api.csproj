@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GrossToNetCalculator.Model\GrossToNetCalculator.Model.csproj" />
+    <ProjectReference Include="..\GrossToNetCalculator.Service\GrossToNetCalculator.Service.csproj" />
   </ItemGroup>
 
 </Project>

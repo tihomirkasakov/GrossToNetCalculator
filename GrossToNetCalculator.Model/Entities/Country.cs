@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GrossToNetCalculator.Model.Entities
+﻿namespace GrossToNetCalculator.Model.Entities
 {
     public class Country : BaseEntity
     {
         public string Name { get; set; }
         public bool IsActive { get; set; }
+        public int CurrencyId { get; set; }
+        public Currency Currency { get; set; }
+        public int TaxationRuleId { get; set; }
+        public TaxationRule TaxationRule { get; set; }
     }
 }

@@ -1,15 +1,13 @@
+using GrossToNetCalculator.Data.Repositories;
+using GrossToNetCalculator.Data.Repositories.Interfaces;
+using GrossToNetCalculator.Service;
+using GrossToNetCalculator.Service.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace GrossToNetCalculator.Api
 {
@@ -32,6 +30,10 @@ namespace GrossToNetCalculator.Api
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "GrossToNetCalculator.Api", Version = "v1" });
             });
             services.AddMemoryCache();
+            //Services
+            services.AddTransient<ICalculatorService, CalculatorService>();
+            //Repositories
+            services.AddTransient<ICountryRepository, CountryRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
