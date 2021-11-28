@@ -18,6 +18,10 @@ namespace GrossToNetCalculator.Service
         public ContactTaxesDto CalculateContactTaxes(ContactDto model)
         {
             Country country = _countryRepository.GetCountryByCurrency(CURRENCY_SHORT_CODE_LOWER_CASE);
+            if (country==null)
+            {
+                return null;
+            }
             (decimal charitySpend, decimal incomeTax, decimal socialTax) taxes = CalculateTaxes(model, country);
             ContactTaxesDto contactTaxes = new ContactTaxesDto()
             {
@@ -40,7 +44,7 @@ namespace GrossToNetCalculator.Service
             }
             else
             {
-                decimal allowedCharitySpent = CalculateTaxAfterTaxPercentage(model.TaxPayer?.GrossIncome, country.TaxationRule?.CharitySpentPercentage);
+                decimal allowedCharitySpent = CalculateTaxAfterTaxPercentage(model.TaxPayer?.GrossIncome, country.TaxationRule.CharitySpentPercentage);
                 decimal charitySpent = model.CharitySpent > allowedCharitySpent ? allowedCharitySpent : model.CharitySpent;
                 decimal incomeTax = CalculateIncomeTax(model, country, charitySpent);
                 decimal socialTax = CalculateSocialTax(model, country, charitySpent);

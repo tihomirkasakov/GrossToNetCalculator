@@ -18,7 +18,7 @@ namespace GrossToNetCalculator.Model.Dtos
 
         public TaxPayerDto TaxPayer { get; set; }
         [Required]
-        public decimal SSN { get; set; }
+        public string SSN { get; set; }
         public decimal CharitySpent { get; set; }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
@@ -43,7 +43,7 @@ namespace GrossToNetCalculator.Model.Dtos
                 yield return new ValidationResult(@"'Gross Income' should be a positive number");
             }
 
-            if (!Regex.IsMatch(SSN.ToString(), SSN_PATTERN))
+            if (!Regex.IsMatch(SSN, SSN_PATTERN))
             {
                 yield return new ValidationResult(@$"'SSN' should be between {SSN_LOWER} and {SSN_HIGHER} digits");
             }
